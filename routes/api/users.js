@@ -1,11 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const db = require("../../config/keys").mongoURI;
-const User = require("../../models/User");
 
-mongoose.connect(db).then(() => {
-  console.log("MONGO CONNECTED!");
-});
+const User = require("../../models/User");
 
 const router = express.Router();
 

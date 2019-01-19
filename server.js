@@ -2,6 +2,12 @@ const express = require("express");
 
 const bodyParser = require("body-parser");
 const app = express();
+const mongoose = require("mongoose");
+
+const db = require("./config/keys").mongoURI;
+mongoose.connect(db).then(() => {
+  console.log("MONGO CONNECTED!");
+});
 
 //Body Parser middleware
 

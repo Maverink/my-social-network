@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
-router.get("/test", (req, res) => {
+router.use("/test", (req, res) => {
   res.json({ msg: "welcome to posts test" });
 });
 
