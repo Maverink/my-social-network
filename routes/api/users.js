@@ -31,16 +31,35 @@ router.post("/register", (req, res) => {
       bcrypt.genSalt(10, (err, salt) => {
         bcrypt.hash(req.body.password, salt, (err, hash) => {
           if (err) throw err;
+
           newUser.password = hash;
           newUser
             .save()
-            .then(user => {
-              res.json({ user });
-            })
+            .then(user => res.json({ msg: "You ve been registered" }))
             .catch(err => console.log(err));
         });
       });
     }
+  });
+});
+
+router.post("/login", (req, res) => {
+  const email = req.body.email;
+  const password = req.body.password;
+
+  User.findOne({ email }).then(user => {
+    if (!user) {
+      res
+        .status(404)
+        .send("Sorry you not regisred with us, Go to the login page");
+    }
+    bcrypt.compare(password, user.password).then(isMatch => {
+      if (isMatch) {
+        res.send("Hello and welcome " + user.name);
+      } else {
+        res.status(404).send("Sorry Wrong password!");
+      }
+    });
   });
 });
 
