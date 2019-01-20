@@ -19,8 +19,8 @@ const profile = require("./routes/api/profile");
 const posts = require("./routes/api/posts");
 
 app.use("/api/users", users);
-app.use("/api/profile", profile);
-app.use("/api/posts", posts);
+app.use("/api/users", profile);
+app.use("/api/users", posts);
 
 const port = process.env.PORT || 5000;
 app.listen(port);

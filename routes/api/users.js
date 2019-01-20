@@ -27,21 +27,48 @@ router.post("/register", (req, res) => {
         password: req.body.email,
         avatar
       });
+      ///////////
 
-      bcrypt.hash(newUser.password, 10, (err, hash) => {
-        if (err) throw err;
+      bcrypt.genSalt(10, (err, salt) => {
+        console.log("salt is " + salt);
+        bcrypt.hash(req.body.password, salt, (err, hash) => {
+          if (err) throw err;
 
-        newUser.password = hash;
-        newUser
-          .save()
-          .then(user => {
-            res.json({ user });
-          })
-          .catch(err => {
-            console.log(err);
-          });
+          console.log("hash is " + hash);
+
+          newUser.password = hash;
+
+          newUser
+            .save()
+            .then(user => {
+              console.log(newUser.name + " saved");
+            })
+            .catch(err => console.log(err));
+        });
       });
     }
+  });
+});
+
+router.post("/login", (req, res) => {
+  const email = req.body.email;
+  const password = req.body.password;
+
+  User.findOne({ email }).then(user => {
+    if (!user) {
+      return res.status(404).send("sorry you not in our records");
+    }
+
+    bcrypt.compare(password, user.password).then(isMatch => {
+      if (isMatch) {
+        res.json({ msg: "Sucess" });
+      } else {
+        return res.status(400).json({ msg: "Sorry Password doesnt match" });
+      }
+    });
+    //check password
+
+    // bcrypt.compare(password);
   });
 });
 
