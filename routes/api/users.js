@@ -28,7 +28,13 @@ router.post("/register", (req, res) => {
         avatar
       });
 
-      bcrypt.genSalt;
+      bcrypt.genSalt(10, (err, salt) => {
+        bcrypt.hash(salt, req.body.password, (err, hash) => {
+          if (err) throw err;
+          newUser.password = hash;
+          newUser.save().then(user => console.log(user));
+        });
+      });
     }
   });
 });

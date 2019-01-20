@@ -1,0 +1,53 @@
+* [33mcommit d519562570b82444d8d7756b6dc4f8bb24c5819d[m[33m ([m[1;36mHEAD -> [m[1;32mpractise-bcrypt[m[33m, [m[1;31morigin/practise-bcrypt[m[33m, [m[1;31morigin/master[m[33m, [m[1;32mmaster[m[33m)[m
+[31m|[m Author: maverink <juliomaurocarvalho@hotmail.com>
+[31m|[m Date:   Sat Jan 19 23:17:34 2019 +0000
+[31m|[m 
+[31m|[m     encrypt pass before saving on DB with bcrypt
+[31m|[m 
+* [33mcommit b385e39f9392faab055eddc5483132667fe3f0bd[m
+[31m|[m Author: maverink <juliomaurocarvalho@hotmail.com>
+[31m|[m Date:   Sat Jan 19 22:46:48 2019 +0000
+[31m|[m 
+[31m|[m     installed gravatar and added it to the User when saved into DB
+[31m|[m 
+* [33mcommit f7f8283734605a421daa69cfc944a25d5acc5f05[m
+[31m|[m Author: maverink <juliomaurocarvalho@hotmail.com>
+[31m|[m Date:   Sat Jan 19 22:33:51 2019 +0000
+[31m|[m 
+[31m|[m     fixed minor bugs
+[31m|[m 
+* [33mcommit cd66b1891bcbac3fd5f864d05978282ae52d2d2b[m
+[31m|[m Author: maverink <juliomaurocarvalho@hotmail.com>
+[31m|[m Date:   Sat Jan 19 22:28:36 2019 +0000
+[31m|[m 
+[31m|[m     started /users/register basic functionality
+[31m|[m 
+* [33mcommit 6383d6ab8a25971b535067b0fb1d6f4de23c013c[m
+[31m|[m Author: maverink <juliomaurocarvalho@hotmail.com>
+[31m|[m Date:   Sat Jan 19 18:34:20 2019 +0000
+[31m|[m 
+[31m|[m     done User model and created Schema
+[31m|[m 
+* [33mcommit edf3a73be1223f104cef74910591350ecb1090dc[m
+[31m|[m Author: maverink <juliomaurocarvalho@hotmail.com>
+[31m|[m Date:   Sat Jan 19 15:04:45 2019 +0000
+[31m|[m 
+[31m|[m     main resources and routes
+[31m|[m 
+* [33mcommit 8435e9f2146653a268abb11ffaf527eb8f432500[m
+[31m|[m Author: maverink <juliomaurocarvalho@hotmail.com>
+[31m|[m Date:   Sat Jan 19 14:37:37 2019 +0000
+[31m|[m 
+[31m|[m     connected db to mongoose
+[31m|[m 
+* [33mcommit 7565d27f252226c29ecf4c0c8d24eeee3d92cfb8[m
+[31m|[m Author: maverink <juliomaurocarvalho@hotmail.com>
+[31m|[m Date:   Sat Jan 19 14:27:48 2019 +0000
+[31m|[m 
+[31m|[m     install dependencies and basci server.js configuration
+[31m|[m 
+* [33mcommit e5119c3e9f3a87897afaf73b280c23e6c4b2ecb8[m
+  Author: maverink <juliomaurocarvalho@hotmail.com>
+  Date:   Sat Jan 19 14:18:41 2019 +0000
+  
+      intial commit
