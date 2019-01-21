@@ -67,14 +67,9 @@ router.post("/login", (req, res) => {
         const payload = { id: user.id, name: user.name, avatar: user.avatar };
         //sign the token
 
-        jwt.sign(
-          payload,
-          secretOrPrivateKey,
-          { expiresIn: 3600 },
-          (err, token) => {
-            res.json({ success: true, token: "Bearer " + token });
-          }
-        );
+        jwt.sign(payload, secretOrPrivateKey, (err, token) => {
+          res.json({ msg: "sucess", token: "Bearer " + token });
+        });
       } else {
         return res.status(400).json({ msg: "Sorry Password doesnt match" });
       }
